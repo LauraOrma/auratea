@@ -1,0 +1,55 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+
+.cardGuide {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-image: url("../../../../public/images/background/guia-background.svg");
+  background-position: right -30px bottom -20px;
+  background-repeat: no-repeat;
+
+  @media (min-width: sizes.$tablet) {
+    min-height: 400px;
+    background-size: 350px;
+    padding: 4rem 3rem;
+    background-position: right 140px bottom -40px;
+  }
+
+  &__content {
+    max-width: 200px;
+    @media (min-width: sizes.$tablet) {
+      max-width: 500px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
+  }
+
+  &__text {
+    font-size: clamp(12px, 2.5vw, 1.25rem);
+    @media (min-width: sizes.$tablet) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  &--bgDarkPurple {
+    background-color: colors.$bg-darkPurple;
+
+    h3, p {
+      color: white !important;
+    }
+  }
+
+  &--bgYellow {
+    background-color: colors.$bg-yellow;
+  }
+
+  &--bgLight {
+    background-color: colors.$bg-lightPurple;
+  }
+
+  &--bgPink {
+    background-color: colors.$bg-pink;
+  }
+}

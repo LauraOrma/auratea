@@ -1,0 +1,25 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+
+.slider {
+  overflow-y: scroll;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 1.5rem;
+  gap: 1rem;
+
+  @media (min-width: sizes.$tablet) {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+  @media (min-width: sizes.$desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    grid-gap: 1.5rem;
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,1 @@
+.mobileShortcuts ul{margin:0;display:grid;grid-template-columns:1fr 1fr 1fr;border-radius:.5rem;grid-gap:.5rem;padding:1.5rem 0;list-style:none}@media(min-width: 1240px){.mobileShortcuts{display:none}}/*# sourceMappingURL=MobileShortcuts.module.css.map */

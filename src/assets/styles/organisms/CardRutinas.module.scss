@@ -1,0 +1,49 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+
+.cardRutinas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  border: 1px solid colors.$border-color;
+  border-radius: 0.5rem;
+  height: 3rem;
+  padding: 0 1rem;
+
+  @media (min-width: sizes.$desktop) {
+    height: 5rem;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: clamp(12px, 2.5vw, 1rem);
+    padding: 0;
+    margin: 0;
+    color: colors.$text-brand-color;
+  }
+
+  &__icon {
+    padding: 0.25rem;
+
+    img {
+      width: 1.5rem;
+    }
+  }
+
+  &__name {
+    font-size: clamp(14px, 2.5vw, 1rem);
+    color: colors.$text-darker-color;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+}

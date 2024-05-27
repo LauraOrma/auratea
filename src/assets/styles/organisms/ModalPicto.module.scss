@@ -1,0 +1,48 @@
+@use "../settings/colors";
+
+.modalPicto {
+  padding: 2rem 1rem;
+  width: 90%;
+  max-width: 600px;
+  min-height: 440px;
+  background: colors.$background-light-color;
+  border-radius: 1rem;
+
+  &__button {
+    padding: 0;
+    margin: 0;
+    border: 1px dashed colors.$border-color;
+    background: colors.$background-light-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    height: 104px;
+    border-radius: 8px;
+    gap: 0.5rem;
+    color: colors.$background-darker-color;
+    width: 100%;
+
+    img {
+      width: 28px;
+    }
+  }
+
+  &__grid {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    min-height: 240px;
+    max-height: 324px;
+    overflow-y: scroll;
+    background: colors.$background-lighter-color;
+  }
+
+  &__footer {
+    padding-top: 1.5rem;
+  }
+}

@@ -1,0 +1,442 @@
+@use "settings/sizes";
+@use "settings/colors";
+
+// Settings
+@import "settings/colors";
+@import "settings/typography";
+@import "settings/z-index";
+
+// Generic
+@import "generic/normalize";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $font-family;
+  background-color: colors.$background-light-color;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul, ol, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: colors.$text-color;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+h1 {
+  color: colors.$text-color;
+  margin: 0;
+  font-size: clamp(1.125rem, 2.5vw, 2.25rem);
+  font-weight: bold;
+  font-family: #{$font-family-headings};
+}
+
+h2 {
+  color: colors.$text-color;
+  margin: 0;
+  padding-bottom: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-weight: bold;
+  font-family: #{$font-family-headings};
+}
+
+h3 {
+  color: colors.$text-color;
+  margin: 0;
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  font-family: #{$font-family-headings};
+}
+
+h4 {
+  color: colors.$text-color;
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  font-family: #{$font-family-headings};
+}
+
+h5 {
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  font-family: #{$font-family-headings};
+}
+
+p {
+  color: colors.$text-color;
+  font: $b400-regular;
+  margin-bottom: 1rem;
+  line-height: 150%;
+}
+
+*:focus-visible {
+  outline: none !important;
+  border: 2px solid colors.$cta-primary-background !important;
+}
+
+.content {
+  background-image: url("../../../public/images/background/main-background.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.mainSection {
+  position: relative;
+  padding-bottom: 5.8rem;
+  min-height: 40vh;
+
+  h1, h2, h3 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.rutinasList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  @media (min-width: sizes.$desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.rutinaPage__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fixedButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background: colors.$background-light-color;
+  padding: 1rem 0;
+  @media (min-width: sizes.$desktop) {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+}
+
+label {
+  font-size: 12px;
+  display: block;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+.internSection {
+  padding-bottom: 1.5rem;
+}
+
+.btnGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.resourceSection {
+  padding-bottom: 3rem;
+}
+
+.guia {
+  &__paso {
+    padding: 3rem 0;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      font-size: clamp(24px, 2.5vw, 34px);
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: clamp(14px, 2.5vw, 16px);
+      padding-bottom: 2rem;
+    }
+
+    .btnGroup {
+      margin: 0 auto;
+      min-width: 280px;
+    }
+  }
+
+  &__btn {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.cancelBtn {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    background: none;
+    text-decoration: underline;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.playRutina {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: colors.$background-primary-color;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 0;
+  font-size: 12px;
+  min-height: 104px;
+  gap: 1rem;
+
+  img {
+    width: 32px;
+  }
+}
+
+.newRutinaButton {
+  @media (min-width: sizes.$desktop) {
+    display: none;
+  }
+}
+
+.newRutinaButton--desktop {
+  margin: 0 auto;
+  max-width: 400px;
+  display: none;
+  padding: 3rem 0;
+  @media (min-width: sizes.$desktop) {
+    display: block;
+  }
+}
+
+.loginSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    background-color: #F4F6FA;
+    border-radius: 12px;
+    border: 1px solid colors.$border-grey;
+    padding: 4rem 1rem 1rem;
+    min-height: 600px;
+    margin: 0 auto;
+    max-width: 500px;
+    background-image: url("../../../public/images/background/login-background.svg");
+    background-position: center -170px;
+    background-repeat: no-repeat;
+    background-size: 148%;
+    position: relative;
+
+    @media (min-width: sizes.$desktop) {
+      background-position: center -340px;
+    }
+  }
+
+  &__brand {
+    position: absolute;
+    width: 100px;
+    top: 40px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: clamp(18px, 2.5vw, 22px);
+    padding-bottom: 1.5rem;
+  }
+
+  &__claim {
+    display: block;
+    color: colors.$text-darker-color;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: bold;
+    font-family: #{$font-family-headings};
+    text-align: center;
+  }
+
+  input {
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  a {
+    font-size: 14px;
+    padding: 1rem 0;
+    text-align: center;
+    display: block;
+    text-decoration: underline;
+    color: #1C2432;
+  }
+}
+
+.recursoPage {
+  max-width: 900px;
+
+  h1 {
+    background-color: #424D85;
+    padding: 1rem;
+    color: white;
+    border-radius: 12px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    color: #424D85;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    color: #424D85;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+  ul, ol, li {
+    font-size: 1rem;
+    line-height: 150%;
+  }
+
+  ul, ol {
+    padding-left: 1rem;
+  }
+
+  li {
+    padding-bottom: 1rem;
+    position: relative;
+  }
+
+  li:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 10px;
+    top: 10px;
+    background-color: #7085EC;
+    display: inline-block;
+    margin-left: -1em;
+  }
+
+  &__image {
+    padding: 1.5rem;
+    background-color: colors.$background-darker-color;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-top: 2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 180px;
+    }
+  }
+}
+
+.recursosResult {
+  min-width: 1200px;
+}
+
+.terapeutaCard {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 16px;
+  border-bottom-right-radius: 0px;
+  min-width: 290px;
+  border: 2px solid colors.$border-color;
+
+  h3 {
+    color: colors.$text-brand-color;
+    padding-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  span {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 0.5rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #424D85;
+  }
+}
+

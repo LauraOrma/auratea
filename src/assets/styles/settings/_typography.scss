@@ -1,0 +1,12 @@
+$font-family: var(--font-family);
+$font-family-headings: var(--font-family-headings);
+
+// Body sizes
+$b500-bold: 700 1.31rem / 1.33 #{$font-family};
+$b500-regular: 1.31rem / 1.33 #{$font-family};
+$b400-bold: 700 1.125rem / 1.55 #{$font-family};
+$b400-regular: 1.125rem / 1.55 #{$font-family};
+$b300-bold: 700 1rem / 1.5 #{$font-family};
+$b300-regular: 1rem / 1.5 #{$font-family};
+$b200-bold: 700 0.875rem / 1.42 #{$font-family};
+$b200-regular: 0.875rem / 1.42 #{$font-family};

@@ -1,0 +1,97 @@
+@use "../settings/sizes";
+@use "../settings/colors";
+@import "../settings/typography";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  @media (min-width: sizes.$desktop) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__brand {
+    width: 180px;
+    @media (min-width: sizes.$desktop) {
+      width: 220px;
+    }
+  }
+
+  &__avatar {
+    background-color: colors.$background-primary-color;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: #{$font-family-headings};
+    border: none;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    background: transparent;
+    border: none;
+    height: 28px;
+    width: 28px;
+  }
+
+  &__notifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    background: transparent;
+    border: none;
+    height: 28px;
+    width: 28px;
+  }
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+  }
+
+  &__nav {
+    display: none;
+    @media (min-width: sizes.$desktop) {
+      display: block;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1.5rem;
+      padding-right: 2rem;
+
+      li {
+        a {
+          color: colors.$text-darker-color;
+          font-size: clamp(14px, 2.5vw, 1rem);
+          text-decoration: none;
+          transition: .3s all;
+        }
+
+        a:hover {
+          color: colors.$text-brand-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.container {
+    max-width: 90%;
+    margin: 0 auto
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 375px !important
+    }
+}
+
+@media (min-width: 660px) {
+    .container {
+        width: 660px !important
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 1024px !important
+    }
+}
+
+@media (min-width: 1240px) {
+    .container {
+        width: 1240px !important
+    }
+}
+
+/*# sourceMappingURL=Container.module.css.map */

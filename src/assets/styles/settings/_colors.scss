@@ -1,0 +1,75 @@
+//Paleta de colores. Utilizamos las variables de color $_ para los genéricos
+
+$_primary-color: #7085EC;
+$_secondary-color: #424D85;
+$_accent-color: #FFE6A6;
+$_black: #1C2432;
+
+//Tints (Light)
+$_tint: #F4F6FA;
+$_white: #FFFFFF;
+
+//Shades (Dark)
+$_shade: #424D85;
+
+//Tones (Grey)
+$_tone: #99A0A8;
+
+//Background
+$background-primary-color: $_primary-color;
+$background-accent-color: $_accent-color;
+$background-darker-color: $_shade;
+$background-light-color: $_tint;
+$background-lighter-color: $_white;
+$background-input-white: $_white;
+$background-input: $_tint;
+
+//Resources Background
+$bg-darkPurple: #424D85;
+$bg-yellow: #FFD596;
+$bg-lightPurple: #CCD2EF;
+$bg-pink: #F0C9DE;
+
+//Borders
+$border-color: $_primary-color;
+$border-grey: $_tone;
+
+//Texts
+$text-color: $_black;
+$text-muted-color: $_tone;
+$text-brand-color: $_primary-color;
+$text-darker-color: $_shade;
+$text-accent-color: $_accent-color;
+$text-inverted-color: $_white;
+
+//Inputs
+$input-color: $_tone;
+$input-background: $_white;
+$input-text: $_tone;
+
+//Links
+$link-primary-color: $_primary-color;
+$link-secondary-color: $_black;
+$link-light-color: $_tint;
+
+//CTA/Button
+$cta-primary-background: $_primary-color;
+$cta-primary-text: $_white;
+$cta-primary-border: $_primary-color;
+$cta-secondary-background: transparent;
+$cta-secondary-text: $_secondary-color;
+$cta-secondary-border: $_secondary-color;
+$cta-alternative-background: transparent;
+$cta-alternative-text: $_primary-color;
+$cta-alternative-border: $_primary-color;
+$cta-light-background: $_tint;
+$cta-light-text: $_secondary-color;
+$cta-light-border: $_tint;
+
+
+//Icons
+$icon-primary-color: $_primary-color;
+$icon-secondary-color: $_secondary-color;
+$icon-accent-color: $_accent-color;
+$icon-white-color: $_white;
+

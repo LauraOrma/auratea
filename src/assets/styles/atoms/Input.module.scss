@@ -1,0 +1,68 @@
+@use "../settings/colors";
+
+.input {
+  color: colors.$text-muted-color;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  border: 2px solid #e1e1e1;
+  transition: all .3s;
+  box-sizing: border-box;
+  padding: 0 0.75rem;
+
+  &:active {
+    background: white;
+  }
+
+  &:focus {
+    background: white;
+    border: 2px solid colors.$border-color;
+  }
+
+  &:focus-visible {
+    background: white;
+    outline: none !important;
+  }
+
+  &--bgWhite {
+    background-color: white;
+  }
+
+  &--bgGrey {
+    background-color: colors.$background-lighter-color;
+  }
+
+  &--error {
+    border: 2px solid #f24e1e;
+
+    &:focus {
+      background: white;
+      border: 2px solid #f24e1e;
+    }
+  }
+}
+
+.textarea {
+  text-transform: uppercase;
+  max-width: 100%;
+  color: colors.$text-muted-color;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  max-height: 6rem;
+  height: 6rem;
+  border: 0;
+  padding: 1rem 0 0 1rem;
+  margin-bottom: 1rem;
+  resize: none;
+}
+
+.errorMessage {
+  text-align: left;
+  color: #f24e1e;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 4px;
+  margin-bottom: 1rem;
+}

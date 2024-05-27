@@ -1,0 +1,48 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+
+.cardResource {
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 150px;
+  min-height: 160px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: right -20px bottom -20px;
+  background-size: 80%;
+
+  @media (min-width: sizes.$desktop) {
+    height: 240px;
+    background-position: right -20px bottom -40px;
+    background-size: 65%;
+  }
+
+  &__content {
+    max-width: 200px;
+  }
+
+  &__title {
+    font-size: clamp(14px, 2.5vw, 22px);
+  }
+
+  &--bgDarkPurple {
+    background-color: colors.$bg-darkPurple;
+
+    h3 {
+      color: white !important;
+    }
+  }
+
+  &--bgYellow {
+    background-color: colors.$bg-yellow;
+  }
+
+  &--bgLightPurple {
+    background-color: colors.$bg-lightPurple;
+  }
+
+  &--bgPink {
+    background-color: colors.$bg-pink;
+  }
+}

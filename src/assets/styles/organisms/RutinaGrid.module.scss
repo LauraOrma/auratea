@@ -1,0 +1,22 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+
+.rutinaGrid {
+  background: colors.$background-lighter-color;
+  min-height: 26.5rem;
+  border-radius: 4px;
+  border: 1px solid colors.$border-color;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.25rem;
+  grid-gap: 0.25rem;
+  grid-auto-rows: min-content;
+  position: relative;
+
+  @media (min-width: sizes.$desktop) {
+    grid-template-columns: repeat(6, 1fr);
+    min-height: 28rem;
+    padding: 1rem;
+    grid-gap: 1rem;
+  }
+}

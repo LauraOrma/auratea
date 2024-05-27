@@ -1,0 +1,19 @@
+@use "../settings/sizes";
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media (max-width: sizes.$mobile-xs) {
+    width: sizes.$mobile-xs !important;
+  }
+  @media (min-width: sizes.$mobile) {
+    width: sizes.$mobile !important;
+  }
+  @media (min-width: sizes.$tablet) {
+    width: sizes.$tablet !important;
+  }
+  @media (min-width: sizes.$desktop) {
+    width: sizes.$desktop !important;
+  }
+}
