@@ -331,6 +331,11 @@ label {
 .recursoPage {
   max-width: 900px;
 
+  a {
+    color: colors.$text-brand-color !important;
+    text-decoration: underline !important;
+  }
+
   h1 {
     background-color: #424D85;
     padding: 1rem;

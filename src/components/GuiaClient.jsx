@@ -20,7 +20,7 @@ const GuiaClient = () => {
     '5': false,
     '6': false,
   })
-  const [diagnostico, setDiagnostico] = useState(false)
+  const [diagnostico, setDiagnostico] = useState(null)  // Cambiado a null
   const [currentStep, setCurrentStep] = useState(1)
   const [recursos, setRecursos] = useState([])
   const [terapeutas, setTerapeutas] = useState([])
@@ -63,7 +63,7 @@ const GuiaClient = () => {
       rutinas: false,
       saludMental: false,
     })
-    setDiagnostico(false)
+    setDiagnostico(null)  // Cambiado a null
     setCurrentStep(1)
     setRecursos([])
     setTerapeutas([])
@@ -83,7 +83,7 @@ const GuiaClient = () => {
       case 5:
         return !Object.values(inquietudes).some(value => value)
       case 6:
-        return diagnostico === false
+        return diagnostico === null  // Cambiado a null
       default:
         return true
     }
@@ -180,11 +180,11 @@ const GuiaClient = () => {
                 <div className={'guia__paso guia__paso6'}>
                   <h2>¿{nombre} tiene un diagnóstico realizado por un profesional?</h2>
                   <div className={'btnGroup'}>
-                    <Button tag={'button'} color={diagnostico ? 'active' : 'alternative'} size={'large'}
+                    <Button tag={'button'} color={diagnostico === true ? 'active' : 'alternative'} size={'large'}
                             onClick={() => setDiagnostico(true)}>
                       Sí
                     </Button>
-                    <Button tag={'button'} color={!diagnostico ? 'active' : 'alternative'} size={'large'}
+                    <Button tag={'button'} color={diagnostico === false ? 'active' : 'alternative'} size={'large'}
                             onClick={() => setDiagnostico(false)}>
                       No
                     </Button>
